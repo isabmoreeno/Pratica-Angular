@@ -1,0 +1,30 @@
+<div class="container mt-5 text-center">
+    
+    <h2>Calcular maior valor:</h2> 
+
+    <div class="subtitulo mt-4"> 
+        <p>Digite três números:</p> 
+    </div>
+
+    <!-- Campo de entrada para o valor -->
+    <div class="mb-3 text-start"> 
+      <label>Valor 1:</label> 
+      <input type="number" class="form-control" [(ngModel)]="valor1"> <!-- Campo numérico com binding bidirecional -->
+    </div>
+    
+    <div class="mb-3 text-start">
+      <label>Valor 2:</label>
+      <input type="number" class="form-control" [(ngModel)]="valor2">
+    </div>
+  
+    <div class="mb-3 text-start">
+      <label>Valor 3:</label>
+      <input type="number" class="form-control" [(ngModel)]="valor3">
+    </div>
+  
+    <!-- Botão para acionar o cálculo do maior valor -->
+    <button class="btn btn-primary mt-4" (click)="calcularMaior()">Calcular</button>
+
+    <!-- Exibe o maior valor apenas se 'maior' não for nulo -->
+    <h3 class="mt-4" *ngIf="maior !== null">O maior valor é: {{ maior }}</h3>
+</div>
